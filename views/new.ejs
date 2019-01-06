@@ -1,0 +1,46 @@
+<% include partials/header.ejs %>
+
+<div class="container">
+    <form action="/clubs" method="POST">
+      <div class="form-row">
+          
+        <div class="form-group col-md-4">
+          <label for="clubName">Club Name</label>
+          <input type="text" class="form-control" name="club[clubName]" placeholder="club name">
+        </div>
+        
+        <div class="form-group col-md-4">
+          <label for="facultyAdvisor">Faculty Advisor</label>
+          <input type="text" class="form-control" name="club[facultyAdvisor]" placeholder="faculty advisor">
+        </div>
+        
+        <div class="form-group col-md-4">
+          <label for="room">Room</label>
+          <input type="text" class="form-control" name="club[room]" placeholder="room">
+        </div>
+        
+      </div>
+      
+      <div class="form-row">
+          
+        <div class="form-group col-md-6">
+          <label for="day">Day(s)</label>
+          <input type="text" class="form-control" name="club[day]" placeholder="day">
+        </div>
+        
+        <div class="form-group col-md-6">
+          <label for="time">Time</label>
+          <input type="text" class="form-control" name="club[time]" placeholder="time">
+        </div>
+        
+      </div>
+      
+     <div class="form-group">
+        <label for="clubDescription">Club Description</label>
+        <textarea class="form-control" name="club[clubDescription]" rows="3" placeholder="club description"></textarea>
+    </div>
+<button type="submit" class="btn btn-primary">Submit</button>
+</div>
+</form>
+
+<% include partials/footer.ejs %>

@@ -1,0 +1,17 @@
+<% include partials/header.ejs %>
+
+<h1>Welcome to the Club Page!</h1>
+<p><button class="btn btn-outline-info btn-lg"><a href="/clubs/new">Add a Club!</a></button></p>
+
+<% for (let i = 0; i < clubs.length; i++) {%>
+    <p>Club Name: <%=clubs[i].clubName%></p>
+    <p>Day: <%=clubs[i].day%></p>
+    <p>Room: <%=clubs[i].room%></p>
+    <p>Time: <%=clubs[i].time%></p>
+    <p>Club Description: <%=clubs[i].clubDescription%></p>
+    <p>Faculty Advisor: <%=clubs[i].facultyAdvisor%></p>
+    
+    <p><a href="/clubs/<%=clubs[i]._id%>">Click here for more information!</a></p>
+    <hr>
+<% } %>
+<% include partials/footer.ejs %>

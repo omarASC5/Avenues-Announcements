@@ -1,0 +1,21 @@
+<% include partials/header.ejs %>
+
+<h1>Welcome to the show route!!!</h1>
+<p><strong><%=club.clubName%></strong></p>
+<p><strong>Day: </strong><%=club.day%></p>
+<p><strong>Faculty Advisor: </strong><%=club.facultyAdvisor%></p>
+<p><strong>Time: </strong><%=club.time%></p>
+<p><strong>Room: </strong><%=club.room%></p>
+<p><strong>Club Description: </strong><%=club.clubDescription%></p>
+
+<!--If the user is not an admin (Ms. Melore) don't display the edit and 
+delete club buttons-->
+<button class="btn btn-outline-info btn-lg">
+    <a href="<%=club._id%>/edit">Edit Club!</a>
+</button>
+
+<form action="/clubs/<%=club._id%>?_method=DELETE" method="POST">
+    <button class="btn btn-outline-danger btn-lg">Remove Club</button>
+</form>
+
+<% include partials/footer.ejs %>
