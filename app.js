@@ -24,7 +24,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 mongoose.connect(keys.MONGODB.DEVELOPMENT_DB_URI, { useNewUrlParser: true });
 
 // Production MLab Database
-// mongoose.connect(keys.MONGODB.PRODUCTION_DB_URI, { useNewUrlParser: true });
+mongoose.connect(keys.MONGODB.PRODUCTION_DB_URI, { useNewUrlParser: true });
 
 // used to serialize the user for the session
 passport.serializeUser(function(user, done) {
