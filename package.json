@@ -1,16 +1,17 @@
-
 {
   "name": "avenues-announcement-website",
   "version": "1.0.0",
   "description": "A website for Avenues Announcements.",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
   },
   "author": "Omar Cobas & Wonyoung Park",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.18.3",
+    "connect-ensure-login": "^0.1.1",
     "ejs": "^2.6.1",
     "express": "^4.16.4",
     "googleapis": "^27.0.0",

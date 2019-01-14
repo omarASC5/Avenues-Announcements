@@ -1,12 +1,23 @@
+// The router manages routes attached to it
 const router = require("express").Router();
 const Club = require("../models/club");
 
+// =============================================================================
+// ============================== RESTful ROUTES ===============================
+// =============================================================================
 
 // 1. INDEX ROUTE
-router.get("/", function(req, res) {
-   res.redirect("/clubs"); 
+router.get("/", function(req, res, auth) {
+  res.render("home", {user: req.user});
+
 });
 
+// About Page Route
+router.get("/about", function(req, res) {
+   res.render("about", {user: req.user}); 
+});
+
+// Clubs Page Route
 router.get("/clubs", function(req, res) {
   // Find all clubs in the DB
   // Pass in data from all of them into the clubs page
@@ -21,7 +32,7 @@ router.get("/clubs", function(req, res) {
 
 // 2. NEW ROUTE
 router.get("/clubs/new", function(req, res) {
-  res.render("new"); 
+  res.render("new", {user: req.user}); 
 });
 
 // 3. CREATE ROUTE
@@ -43,7 +54,7 @@ router.get("/clubs/:id", function(req, res) {
     if (err) {
       console.log(err);
     } else {
-      res.render("show", {club: club});
+      res.render("show", {club: club, user: req.user});
     }
   });
 });
@@ -54,7 +65,7 @@ router.get("/clubs/:id/edit", function(req, res) {
     if (err) {
       console.log(err);
     } else {
-      res.render("edit", {club: club});
+      res.render("edit", {club: club, user: req.user});
     }
   });
 });

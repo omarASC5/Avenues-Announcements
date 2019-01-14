@@ -1,0 +1,50 @@
+html, body {
+    height: 100%;
+}
+
+h3 {
+    text-align: center;
+    font-style: italic;
+}
+
+.about-page-primary-header {
+    text-align: center;
+}
+
+.about-page-secondary-header {
+    text-align: center;
+    font-style: italic;
+    font-weight: 400;
+}
+
+.question-and-answer-flex-container {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+/* .about-the-creators-main-container {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: space-around;
+} */
+
+.about-the-creators-main-container {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    /* Styles */
+    
+    .about-the-creators-main-container {
+        flex-direction: column;
+    }
+}
+
+
